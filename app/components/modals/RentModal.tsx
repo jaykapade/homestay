@@ -3,21 +3,21 @@ import React, { useMemo, useState } from "react";
 
 import useRentModal from "@/app/hooks/useRentModal";
 
-import Modal from ".";
+import Modal from "./Modal";
 import Heading from "../Heading";
 import { categories } from "../Navbar/Categories";
-import CategoryInput from "../Input/CategoryInput";
+import CategoryInput from "../inputs/CategoryInput";
 import {
   FieldValue,
   FieldValues,
   SubmitHandler,
   useForm,
 } from "react-hook-form";
-import CountrySelect from "../Input/CountrySelect";
+import CountrySelect from "../inputs/CountrySelect";
 import dynamic from "next/dynamic";
-import Counter from "../Input/Counter";
-import ImageUpload from "../Input/ImageUpload";
-import Input from "../Input";
+import Counter from "../inputs/Counter";
+import ImageUpload from "../inputs/ImageUpload";
+import Input from "../inputs/Input";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
