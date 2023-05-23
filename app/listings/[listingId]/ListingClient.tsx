@@ -92,7 +92,6 @@ const ListingClient: React.FC<ListingClientProps> = ({
       const dayCount =
         differenceInCalendarDays(dateRange.endDate, dateRange.startDate) + 1;
 
-      console.log("🚀 ~ dayCount:", dayCount);
       if (dayCount && listing.price) {
         setTotalPrice(dayCount * listing.price);
       } else {

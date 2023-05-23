@@ -8,8 +8,15 @@ import FavoritesClient from "./FavoritesClient";
 
 const FavoriteListingsPage = async () => {
   const listings = await getFavoriteListings();
-  console.log("🚀 ~ listings:", listings);
   const currentUser = await getCurrentUser();
+
+  if (!currentUser) {
+    return (
+      <ClientOnly>
+        <EmptyState title="Unauthorized" subtitle="Please login" />
+      </ClientOnly>
+    );
+  }
 
   if (listings.length === 0) {
     return (
